@@ -2,7 +2,7 @@
     echo "Bem vindo(a) ao Screen Match\n";
 
     $nomeFilme = "Top Gun - Maverick";
-    $anoLancamento = 2022;
+    $anoLancamento = $argv[1] ?? 2022;
 
     $somaNotas = 9;
     $somaNotas += 6;
@@ -18,4 +18,6 @@
     echo "Nome do filme: " . $nomeFilme . "\n";
 
     echo "Nota do filme: $notaFilme \n";
+
+    echo "Ano de lançamento: $anoLancamento \n";
 ?>
