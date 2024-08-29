@@ -43,5 +43,12 @@
 
     echo "O gênero do filme $nomeFilme é: $genero\n";
 
-    echo $argc;
+    $filme = [
+        'nome' => 'Thor: Ragnarok',
+        'ano' => 2017,
+        'nota' => 7.8,
+        'genero' => 'Super-herói'
+    ];
+
+    echo $filme['ano'];
 ?>
