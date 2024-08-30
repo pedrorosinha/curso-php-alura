@@ -1,4 +1,4 @@
-<?php 
+<?php
     echo "Bem vindo(a) ao Screen Match\n";
 
     $nomeFilme = "Top Gun - Maverick";
@@ -8,13 +8,13 @@
     $anoLancamento = 2022;
 
     $quantidadeDeNotas = $argc - 1;
-    $somaNotas = 0;
+    $notas = [];
 
     for ($i = 1; $i < $argc; $i++) {
-        $somaNotas += $argv[$i];
+        $notas[] += (float) $argv[$i];
     }
 
-    $notaFilme = $somaNotas / $quantidadeDeNotas;
+    $notaFilme = array_sum($notas) / $quantidadeDeNotas;
     $planoPrime = true;
 
     $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
@@ -26,11 +26,10 @@
     echo "Ano de lançamento: $anoLancamento \n";
 
     if ($anoLancamento > 2022) {
-        echo "Esse filme é um lançamento\n";      
+        echo "Esse filme é um lançamento\n";
     } elseif ($anoLancamento > 2020 && $anoLancamento <= 2022) {
         echo "Esse filme ainda é novo\n";
-    }
-    else {
+    } else {
         echo "Esse filme não é um lançamento\n";
     }
 
@@ -51,4 +50,3 @@
     ];
 
     echo $filme['ano'];
-?>
